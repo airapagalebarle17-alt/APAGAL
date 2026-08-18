@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Family Blog</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #fce7f3, #dbeafe);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 1100px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #cf66a9, #9333ea);
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            height: 40px;
+        }
+
+        nav div {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #fcd34d;
+        }
+
+        .welcome {
+            text-align: center;
+        }
+
+        .family-list {
+            list-style: none;
+            text-align: center;
+        }
+
+        .family-list li {
+            background: #ede9fe;
+            margin: 8px auto;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 350px;
+        }
+
+        .family-list li:hover {
+            background: #9333ea;
+            color: white;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            width: 280px;
+            background: #fff;
+            border-radius: 12px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gallery figure {
+            width: 220px;
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery figure:hover {
+            transform: translateY(-6px);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .main-content,
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        .schedule {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .schedule th,
+        .schedule td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .schedule th {
+            background: #9333ea;
+            color: white;
+        }
+
+        .calendar-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .calendar-header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .calendar-header h2 {
+            color: #9333ea;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+        }
+
+        .day-name {
+            background: #9333ea;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .day {
+            background: #f1f5f9;
+            padding: 18px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .day:hover {
+            background: #cf66a9;
+            color: white;
+        }
+
+        .highlight-day {
+            background: #f59e0b;
+            color: white;
+            font-weight: bold;
+        }
+
+        .grid-span {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 120px);
+            gap: 15px;
+        }
+
+        .span-column {
+            grid-column: span 2;
+            background: #d08989;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .span-row {
+            grid-row: span 2;
+            background: #0db599;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .grid-box {
+            background: #ede9fe;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .family-box {
+            max-width: 400px;
+            padding: 25px;
+            background: linear-gradient(135deg, #9333ea, #ec4899);
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            margin-top: 12px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            background: white;
+            color: #9333ea;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #fce7f3;
+        }
+
+        form input,
+        form textarea,
+        form select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        form textarea {
+            height: 80px;
+        }
+
+        .submit-btn {
+            background: #9333ea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #9333ea;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav div {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .calendar {
+                grid-template-columns: repeat(7, minmax(45px, 1fr));
+                overflow-x: auto;
+            }
+
+            .grid-span {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .span-column,
+            .span-row {
+                grid-column: auto;
+                grid-row: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#activities">Activities</a>
+            <a href="#photos">Photos</a>
+            <a href="#blog">Blog</a>
+            <a href="#calendar">Calendar</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="welcome">
+        <h1>🌸 Welcome to My Family Blog 🌸</h1>
+
+        <p>
+            Welcome to my family blog! This website shares special moments,
+            activities, hobbies, and memories with my family.
+            My family is an important part of my life because they give me
+            love, support, and happiness every day.
+        </p>
+    </section>
+
+    <section id="about">
+        <h2>About My Family</h2>
+
+        <p style="text-align:center; max-width:750px; margin:auto;">
+            My family is the most important part of my life. We always help
+            and support each other. Even when life becomes difficult, we stay
+            together and face challenges as a family.
+        </p>
+    </section>
+
+    <section id="activities">
+        <h2>Our Family Activities</h2>
+
+        <ul class="family-list">
+            <li>⛪ Go to Church</li>
+            <li>🚗 Go for Walks and Rides</li>
+            <li>🍴 Food Trips</li>
+            <li>🏊 Swimming</li>
+            <li>🎮 Watching Cartoons</li>
+        </ul>
+    </section>
+
+    <section id="photos">
+        <h2>Family Photos</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <img src="family.jpg" alt="My Family">
+                <h3>My Family</h3>
+                <p>My family gives me love, support, and happiness.</p>
+            </div>
+
+            <div class="card">
+                <img src="student.jpg" alt="My Student Life">
+                <h3>My Student Life</h3>
+                <p>I study hard to achieve my goals and dreams.</p>
+            </div>
+
+            <div class="card">
+                <img src="hobbies.jpg" alt="My Hobbies">
+                <h3>My Hobbies</h3>
+                <p>I enjoy going for walks, going on trips, and food trips.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Family Memories</h2>
+
+        <div class="gallery">
+
+            <figure>
+                <img src="family.jpg" alt="Family">
+                <figcaption><b>Family Time</b></figcaption>
+                <p>We enjoy spending time together.</p>
+            </figure>
+
+            <figure>
+                <img src="student.jpg" alt="Student Life">
+                <figcaption><b>Student Life</b></figcaption>
+                <p>School is an important part of my life.</p>
+            </figure>
+
+            <figure>
+                <img src="hobbies.jpg" alt="Hobbies">
+                <figcaption><b>Family Hobbies</b></figcaption>
+                <p>We enjoy different activities together.</p>
+            </figure>
+
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>My Family Blog</h2>
+
+        <div class="blog-layout">
+
+            <div class="main-content">
+
+                <p>
+                    <b>Publication Date:</b> August 3, 2026
+                </p>
+
+                <p>
+                    <b>Author:</b> Aira Pagal
+                </p>
+
+                <p class="highlight" style="background-color: rgb(137, 163, 175);">
+                    My family is the most important part of my life.
+                    They give me love, support, and strength every day.
+                    Even when life becomes difficult, we always help each
+                    other and stay together.
+                </p>
+
+                <p class="highlight" style="background-color: rgb(142, 111, 161);">
+                    As a college student, it is sometimes hard to balance
+                    school and family responsibilities. I need to finish
+                    my assignments, study my lessons, and still find time
+                    to take care of my family.
+                </p>
+
+                <p class="highlight" style="background-color: rgb(166, 112, 149);">
+                    I believe that love, respect, and understanding make
+                    a family stronger. I am thankful for my family because
+                    they inspire me to keep going, work hard, and never
+                    give up on my dreams.
+                </p>
+
+            </div>
+
+            <div class="sidebar">
+
+                <h3>Our Favorite Hobbies</h3>
+
+                <b>Ordered List</b>
+
+                <ol>
+                    <li>Go to Church</li>
+                    <li>Go for Walks</li>
+                    <li>Food Trips</li>
+                </ol>
+
+                <br>
+
+                <b>Unordered List</b>
+
+                <ul>
+                    <li>Go to the Playground</li>
+                    <li>Swimming</li>
+                    <li>Watching Cartoons</li>
+                </ul>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Weekly Family Schedule</h2>
+
+        <table class="schedule">
+
+            <tr>
+                <th>Day</th>
+                <th>Activity</th>
+                <th>Time</th>
+                <th>Place</th>
+            </tr>
+
+            <tr>
+                <td>Monday - Friday</td>
+                <td>School</td>
+                <td>7:30 AM</td>
+                <td>SLSU - Lucena Campus</td>
+            </tr>
+
+            <tr>
+                <td>Saturday</td>
+                <td>Grandmother's House</td>
+                <td>7:00 AM</td>
+                <td>Brgy. Salinas</td>
+            </tr>
+
+            <tr>
+                <td>Sunday</td>
+                <td>Church</td>
+                <td>9:00 AM</td>
+                <td>St. Ferdinand Cathedral</td>
+            </tr>
+
+        </table>
+    </section>
+
+    <section id="calendar">
+        <h2>Family Calendar</h2>
+
+        <div class="calendar-container">
+
+            <div class="calendar-header">
+                <h2>August 2026 📅</h2>
+            </div>
+
+            <div class="calendar">
+
+                <div class="day-name">Sun</div>
+                <div class="day-name">Mon</div>
+                <div class="day-name">Tue</div>
+                <div class="day-name">Wed</div>
+                <div class="day-name">Thu</div>
+                <div class="day-name">Fri</div>
+                <div class="day-name">Sat</div>
+
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day">1</div>
+
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day highlight-day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+
+                <div class="day">30</div>
+                <div class="day">31</div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Family Activities Using CSS Grid</h2>
+
+        <div class="grid-span">
+
+            <div class="span-column">
+                <b>Family Bonding</b>
+                <br>
+                We spend time together by eating, talking,
+                and enjoying simple moments.
+            </div>
+
+            <div class="grid-box">
+                Family Meals
+            </div>
+
+            <div class="span-row">
+                <b>Family Time</b>
+                <br>
+                Our family enjoys spending weekends together.
+            </div>
+
+            <div class="grid-box">
+                Going for Walks
+            </div>
+
+            <div class="grid-box">
+                Swimming
+            </div>
+
+        </div>
+    </section>
+
+    <section class="centered">
+
+        <div class="family-box">
+
+            <h2>💕 My Family</h2>
+
+            <p>
+                Family is where love, happiness, and support begin.
+                I am thankful for every moment we spend together.
+            </p>
+
+            <button class="btn" onclick="alert('Thank you for visiting my Family Blog! 😊')">
+                Visit My Family Blog
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="contact">
+
+        <h2>Family Information Form</h2>
+
+        <form>
+
+            <label>Full Name:</label>
+            <input type="text" name="fullname" required>
+            <br><br>
+
+            <label>Email:</label>
+            <input type="email" name="email" required>
+            <br><br>
+
+            <label>Comments:</label>
+            <textarea name="comments"></textarea>
+            <br><br>
+
+            <label>Skills:</label><br>
+
+            <input type="checkbox" name="skills" value="HTML">
+            HTML
+
+            <input type="checkbox" name="skills" value="CSS">
+            CSS
+
+            <input type="checkbox" name="skills" value="JavaScript">
+            JavaScript
+
+            <br><br>
+
+            <label>Preferred Contact:</label><br>
+
+            <input type="radio" name="contact" value="Phone">
+            Phone
+
+            <input type="radio" name="contact" value="Email">
+            Email
+
+            <br><br>
+
+            <label>Country:</label>
+
+            <select name="country">
+                <option>Philippines</option>
+                <option>Japan</option>
+                <option>Korea</option>
+                <option>Canada</option>
+                <option>Australia</option>
+            </select>
+
+            <br><br>
+
+            <label>Profile Picture:</label>
+            <input type="file">
+
+            <br><br>
+
+            <input class="submit-btn" type="submit" value="Submit">
+
+        </form>
+
+    </section>
+
+    <footer>
+        <p>
+            Thank you for visiting my Family Blog! 💕
+        </p>
+    </footer>
+
+</body>
+</html>
