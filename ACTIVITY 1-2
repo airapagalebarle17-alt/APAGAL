@@ -3,134 +3,172 @@
 <head>
     <title>Activity 1 and 2</title>
 </head>
+
 <body>
 
-    <a href="#bottom">Go to Bottom</a>
+    <h1><center>MY BLOG POST PAGE</center></h1>
 
-<h1><center>MY BLOG POST PAGE</center></h1>
+    <h6><center>MY FAMILY BLOG POST</center></h6>
 
-<h6><center>MY FAMILY BLOG POST</center></h6>
-<p><b>Publication Date:</b> August 3, 2026</p>
-<p><b>Author:</b> Aira Pagal</p>
+    <p><b>Publication Date:</b> August 3, 2026</p>
+    <p><b>Author:</b> Aira Pagal</p>
 
-<p><center>My family is the most important part of my life. they give me love, support and strength everyday. Even when life bacomes difficult, we always help each other and stay togethr. Speding time with my family makes me happy and reminds me that I am never alone.</center></p>
-<p><center>As a College student, it is sometimes hard to balance scholl and family responsibilities. I need to finish my assignments, study for my lessons, and still find time for my family and also take care of my family. although it can be tiring, I always do my best because I know that my education will help us to have a better future.</center></p>
-<p><center>I believe that love, respect and understandingmake a family stronger. Every challege teaches us to become patient and responsible. I am thankful for my family because they inspire me to keep going, work hard and never give up on my dreams.</center></p>
 
-<h2>Our Favorite Hobbies</h2>
+    <p>
+        <center>
+            My family is the most important part of my life. They give me love,
+            support and strength every day. Even when life becomes difficult,
+            we always help each other and stay together. Spending time with my
+            family makes me happy and reminds me that I am never alone.
+        </center>
+    </p>
 
-<p>Ordered List</p>
-<ol>
-    <li>Go to church</li>
-    <li>Go for Rides</li>
-    <li>Foodtrips</li>
-</ol>
+    <p>
+        <center>
+            As a college student, it is sometimes hard to balance school and
+            family responsibilities. I need to finish my assignments, study
+            for my lessons, and still find time for my family and also take
+            care of my family. Although it can be tiring, I always do my best
+            because I know that my education will help us have a better future.
+        </center>
+    </p>
 
-<p>Unordered List</p>
-<ul>
-    <li>Go to playground</li>
-    <li>Swimming</li>
-    <li>watching Cartoons</li>
-</ul>
+    <p>
+        <center>
+            I believe that love, respect and understanding make a family
+            stronger. Every challenge teaches us to become patient and
+            responsible. I am thankful for my family because they inspire me
+            to keep going, work hard and never give up on my dreams.
+        </center>
+    </p>
 
-<h2>Family Photos</h2>
 
-<center><img src="https://scontent.fmnl3-3.fna.fbcdn.net/v/t39.30808-6/702811930_2632513260497771_7407123047277696772_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGjCTPxyXETy4JecckxBuxKtGgWFjH3ZNu0aBYWMfdk225dDlFbrZvAm4i4klVnyfNBjFLRfyecoFMTIQIQIanp&_nc_ohc=39D2yRerHCgQ7kNvwExPWgH&_nc_oc=AdpN1jvaX0Ny4iUkwCecMTSvidGdNY76F2UnqpAc_fVRSBn4NkPshdg_L5ooAYgpGvs&_nc_zt=23&_nc_ht=scontent.fmnl3-3.fna&_nc_gid=0tGaYm8csj5TAGEJLxNSow&_nc_ss=7a2a8&oh=00_AQHpHDDN46rADgMwAdEiXpMXB6qM3fv06oiluB5E9SHeag&oe=6A761238" alt="Image 1" width="400"></center>
-<p><center>My Family Picture</center></p>
+    <h2>Our Favorite Hobbies</h2>
 
-<center><img src="https://scontent.fmnl3-3.fna.fbcdn.net/v/t39.30808-6/486159616_2241914746224293_6995002305882049725_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s1536x2048&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGtR8IbjjtfZmlIMfiXn7XPrsVSFGyP9guuxVIUbI_2CwAffSMKo-etOfXglwUlXLSIWzWJINZF6cFFkGSzUVdD&_nc_ohc=DE1xsfNRJ3sQ7kNvwF6I3KD&_nc_oc=AdqwXTVCePDOlD1eZE0kqnGWV2GMfwI2fvKAQy9USvgAfW-heOaMoPpZddOkiPXugEo&_nc_zt=23&_nc_ht=scontent.fmnl3-3.fna&_nc_gid=uMcUsDc77NDh8wC4MjXTHg&_nc_ss=7b2a8&oh=00_AQGblvtJbQc4bfsuk8kPrnUn8mhSpY302eeZkIFzeHvPOQ&oe=6A75FFE9" alt="Image 2" width="400"></center>
-<p><center>Me As A Student</center></p>
+    <p>Ordered List</p>
 
-<center><img src="https://scontent.fmnl3-2.fna.fbcdn.net/v/t39.30808-6/492060533_2268925563523211_6678048438803946837_n.jpg?stp=dst-jpg_tt6&cstp=mx1152x1154&ctp=s1152x1154&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHplKc-4u6mQSA5t-_7ImZK6YHscWJmGBzpgexxYmYYHFAPpfcpsIN35KzyZ2ANJZmG8flXoZGIlEQOTIO6B7eR&_nc_ohc=btubdV9ayFsQ7kNvwHQipCU&_nc_oc=AdrpAzEsrdIloEQwG8s1qyD1MpcjCwZSH2MKdpXJpYSah8XZFSgqV5wSKszdT-8Dn3s&_nc_zt=23&_nc_ht=scontent.fmnl3-2.fna&_nc_gid=7wu-5rqH6RR_pcoBJNzTEw&_nc_ss=7b2a8&oh=00_AQGMsokbRIitWvpkviCgqqw8KWGAP6_iixnIimhaKFQNcA&oe=6A75FBD8" alt="Image 2" width="400"></center>
-<p><center>Fun under the Sun</center></p>
+    <ol>
+        <li>Go to Church</li>
+        <li>Go for Rides</li>
+        <li>Food Trips</li>
+    </ol>
 
-<h2>Weekly Schedule</h2>
 
-<table border="1">
-<tr>
-    <th>Day</th>
-    <th>Activity</th>
-    <th>Time</th>
-    <th>Place</th>
-</tr>
+    <p>Unordered List</p>
 
-<tr>
-    <td>Monday- Friday</td>
-    <td>School</td>
-    <td>7:30 AM</td>
-    <td>SLSU- Lucena Campus</td>
-</tr>
+    <ul>
+        <li>Go to Playground</li>
+        <li>Swimming</li>
+        <li>Watching Cartoons</li>
+    </ul>
 
-<tr>
-    <td>Saturday</td>
-    <td>Grandmothers' House</td>
-    <td>7:00 AM</td>
-    <td>Brgy. Salinas</td>
-</tr>
 
-<tr>
-    <td>Sunday</td>
-    <td>Church</td>
-    <td>9:00 AM</td>
-    <td>St. Ferdinand Cathedral</td>
-</tr>
-</table>
+    <h2>Family Photos</h2>
 
-<header>
-<h2>Family Website</h2>
-</header>
+    <center>
+        <img src="https://scontent.fmnl3-3.fna.fbcdn.net/v/t39.30808-6/702811930_2632513260497771_7407123047277696772_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGjCTPxyXETy4JecckxBuxKtGgWFjH3ZNu0aBYWMfdk225dDlFbrZvAm4i4klVnyfNBjFLRfyecoFMTIQIQIanp&_nc_ohc=39D2yRerHCgQ7kNvwExPWgH&_nc_oc=AdpN1jvaX0Ny4iUkwCecMTSvidGdNY76F2UnqpAc_fVRSBn4NkPshdg_L5ooAYgpGvs&_nc_zt=23&_nc_ht=scontent.fmnl3-3.fna&_nc_gid=0tGaYm8csj5TAGEJLxNSow&_nc_ss=7a2a8&oh=00_AQHpHDDN46rADgMwAdEiXpMXB6qM3fv06oiluB5E9SHeag&oe=6A761238"
+        alt="Image 1" width="400">
+    </center>
 
-<article>
-<section>
-<p>About my Family</p>
-</section>
-</article>    
+    <p><center>My Family Picture</center></p>
 
-<h1>FAMILY INFORMATION FORM</h1>
 
-<form>
+    <center>
+        <img src="https://scontent.fmnl3-3.fna.fbcdn.net/v/t39.30808-6/486159616_2241914746224293_6995002305882049725_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s1536x2048&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGtR8IbjjtfZmlIMfiXn7XPrsVSFGyP9guuxVIUbI_2CwAffSMKo-etOfXglwUlXLSIWzWJINZF6cFFkGSzUVdD&_nc_ohc=DE1xsfNRJ3sQ7kNvwF6I3KD&_nc_oc=AdqwXTVCePDOlD1eZE0kqnGWV2GMfwI2fvKAQy9USvgAfW-heOaMoPpZddOkiPXugEo&_nc_zt=23&_nc_ht=scontent.fmnl3-3.fna&_nc_gid=uMcUsDc77NDh8wC4MjXTHg&_nc_ss=7b2a8&oh=00_AQGblvtJbQc4bfsuk8kPrnUn8mhSpY302eeZkIFzeHvPOQ&oe=6A75FFE9"
+        alt="Image 2" width="400">
+    </center>
 
-Full Name:<br>
-<input type="text" required><br><br>
+    <p><center>Me As A Student</center></p>
 
-Email:<br>
-<input type="email" required><br><br>
 
-Comments:<br>
-<textarea></textarea><br><br>
+    <center>
+        <img src="https://scontent.fmnl3-2.fna.fbcdn.net/v/t39.30808-6/492060533_2268925563523211_6678048438803946837_n.jpg?stp=dst-jpg_tt6&cstp=mx1152x1154&ctp=s1152x1154&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHplKc-4u6mQSA5t-_7ImZK6YHscWJmGBzpgexxYmYYHFAPpfcpsIN35KzyZ2ANJZmG8flXoZGIlEQOTIO6B7eR&_nc_ohc=btubdV9ayFsQ7kNvwHQipCU&_nc_oc=AdrpAzEsrdIloEQwG8s1qyD1MpcjCwZSH2MKdpXJpYSah8XZFSgqV5wSKszdT-8Dn3s&_nc_zt=23&_nc_ht=scontent.fmnl3-2.fna&_nc_gid=7wu-5rqH6RR_pcoBJNzTEw&_nc_ss=7b2a8&oh=00_AQGMsokbRIitWvpkviCgqqw8KWGAP6_iixnIimhaKFQNcA&oe=6A75FBD8"
+        alt="Image 3" width="400">
+    </center>
 
-Skills:<br>
-<input type="checkbox"> HTML
-<input type="checkbox"> CSS
-<input type="checkbox"> JavaScript
-<br><br>
+    <p><center>Fun under the Sun</center></p>
 
-Contact:<br>
-<input type="radio" name="contact"> Phone
-<input type="radio" name="contact"> Email
-<br><br>
 
-Country:<br>
-<select>
-    <option>Philippines</option>
-    <option>Japan</option>
-    <option>Korea</option>
-    <option>Canada</option>
-    <option>Australia</option>
-</select>
+    <h2>Weekly Schedule</h2>
 
-<br><br>
+    <table border="1">
 
-Profile Picture:<br>
-<input type="file"><br><br>
+        <tr>
+            <th>Day</th>
+            <th>Activity</th>
+            <th>Time</th>
+            <th>Place</th>
+        </tr>
 
-<input type="submit" value="Submit">
+        <tr>
+            <td>Monday-Friday</td>
+            <td>School</td>
+            <td>7:30 AM</td>
+            <td>SLSU-Lucena Campus</td>
+        </tr>
 
-<footer id="end">
-<p><center>Thank you for visiting my Blog Post!</center></p>
-</footer> 
+        <tr>
+            <td>Saturday</td>
+            <td>Grandmother's House</td>
+            <td>7:00 AM</td>
+            <td>Brgy. Salinas</td>
+        </tr>
 
-</form>
+        <tr>
+            <td>Sunday</td>
+            <td>Church</td>
+            <td>9:00 AM</td>
+            <td>St. Ferdinand Cathedral</td>
+        </tr>
+
+    </table>
+
+
+    <h1>FAMILY INFORMATION FORM</h1>
+
+    <form>
+
+        Full Name:<br>
+        <input type="text" required>
+        <br><br>
+
+        Email:<br>
+        <input type="email" required>
+        <br><br>
+
+        Comments:<br>
+        <textarea></textarea>
+        <br><br>
+
+        Skills:<br>
+        <input type="checkbox"> HTML
+        <input type="checkbox"> CSS
+        <input type="checkbox"> JavaScript
+        <br><br>
+
+        Contact:<br>
+        <input type="radio" name="contact"> Phone
+        <input type="radio" name="contact"> Email
+        <br><br>
+
+        Country:<br>
+        <select>
+            <option>Philippines</option>
+            <option>Japan</option>
+            <option>Korea</option>
+            <option>Canada</option>
+            <option>Australia</option>
+        </select>
+
+        <br><br>
+
+        Profile Picture:<br>
+        <input type="file">
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
 
 </body>
 </html>
