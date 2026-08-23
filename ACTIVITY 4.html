@@ -4,295 +4,441 @@
     <title>Activity 1 and 2</title>
 
     <style>
+
         p {
             font-size: 18px;
             line-height: 1.5;
             text-align: justify;
         }
-
-        a {
-            color: blue;
-            text-decoration: none;
+        a:link {
+            color: #3d08da;
         }
-
+        a:visited {
+            color: #ffdb72;
+        }
         a:hover {
-            color: rgb(4, 90, 249);
-            text-decoration: underline;
+            color: #aa0c65;
         }
-
-        table {
-            border-collapse: collapse;
+        a:active {
+            color: red;
         }
-
-        table, th, td {
-            border: 1px solid black;
+        .highlight {
+            background-color: #e11e83;
+            padding: 3px;
         }
-
-        th, td {
-            padding: 8px;
-        }
-
-        #main-title {
-            font-size: 35px;
-            font-weight: bold;
-            color: #d50808;
+        #family-heading {
+            background-color: #ffb2bb;
+            color: #011309;
             text-align: center;
-        }
-
-        label {
-            padding: 5px;
-            border: 3px solid rgb(157, 216, 233);
-        }
-
-        .navbar {
-            background-color: #cf66a9;
+            font-size: 50px;
             padding: 10px;
         }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links li {
-            margin: 0 15px;
-        }
-
-        .nav-links a {
-            color: black;
-            font-size: 18px;
-        }
-
-        .blog-layout {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 25px;
-        }
-
-        .main-content {
-            padding: 10px;
-        }
-
-        .sidebar {
-            background-color: #eeeeee;
+        section {
             padding: 20px;
-            border-radius: 8px;
+            border: 1px solid black;
+            margin: 20px;
         }
-
-        .sidebar h2 {
-            text-align: center;
+        .paragraph-section {
+            background-color: #fafafa;
+            padding: 10px;
         }
-
+        .pics {
+            background-color: #bee3ce;
+            padding: 10px;
+        }
+        .gradient-background {
+            background: linear-gradient(to right, #ffb2bb, #bee3ce);
+            padding: 10px;
+        }
+        .ordered-list {
+            background: #fafafa;
+            padding: 10px;
+            border: 1px solid black;
+            margin: 20px;
+        }
+        .unordered-list {
+            background: #fafafa;
+            padding: 10px;
+            border: 1px solid black;
+            margin: 20px;
+        }
+        .table {
+            background-color: #ffdb72;
+            padding: 10px;
+        }
+        .form-section {
+            background-color: #ffc396;
+            padding: 10px;
+        }
+        .navigation-bar {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #bee3ce;
+            padding: 15px;
+            margin: 20px;
+        }
         .card-container {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 20px;
-            flex-wrap: wrap;
-            padding: 10px;
+            min-height: 250px;
+            margin: 20px;
         }
-
         .card {
-            flex: 1 1 300px;
-            max-width: 400px;
+            background-color: #ffb2bb;
+            padding: 20px;
+            width: 200px;
             text-align: center;
-            background-color: #d08989;
-            border-radius: 8px;
-            padding: 15px;
+            border: 1px solid black;
         }
-
-        .card img {
-            width: 100%;
-            height: 220px;
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px;
+        }
+        .image-gallery img {
+            width: 250px;
+            height: 200px;
             object-fit: cover;
-            border-radius: 6px;
         }
-
-        .list-container {
+        .center-container {
             display: flex;
             justify-content: center;
-            gap: 50px;
-            margin: 20px 0;
+            align-items: center;
+            height: 300px;
+            margin: 20px;
+            background-color: #ffdb72;
         }
-
-        .calendar-title {
+        .center-element {
+            background-color: #ffb2bb;
+            padding: 30px;
             text-align: center;
-            background-color: #cf66a9;
-            padding: 10px;
-            border-radius: 6px;
-            font-size: 24px;
-            font-weight: bold;
+            border: 1px solid black;
         }
-
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin: 20px;
+        }
+        .main-blog {
+            background-color: #fafafa;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        .sidebar {
+            background-color: #bee3ce;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 20px;
+        }
+        .product {
+            background-color: #ffc396;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid black;
+        }
         .calendar {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             gap: 5px;
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #67cee5;
-            border-radius: 8px;
+            margin: 20px;
         }
-
-        .day-name {
-            background-color: #8c1bab;
-            color: white;
+        .calendar div {
+            border: 1px solid black;
+            padding: 10px;
             text-align: center;
-            font-weight: bold;
-            padding: 10px;
-            border: 1px solid black;
         }
-
-        .day {
-            min-height: 80px;
-            background-color: white;
-            border: 1px solid black;
-            padding: 10px;
+        .calendar-header {
+            background-color: #ffb2bb;
         }
-
-        .day:hover {
-            background-color: #e6e6e6;
-        }
-
         .grid-span {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 100px);
+            grid-template-rows: repeat(3, 100px);
             gap: 10px;
+            margin: 20px;
         }
-
-        .span-column {
-            grid-column: span 2;
-            background-color: #d08989;
+        .spanning-box {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+            background-color: #bee3ce;
             padding: 20px;
-            text-align: center;
-            font-weight: bold;
             border: 1px solid black;
         }
-
-        .span-row {
-            grid-row: span 2;
-            background-color: #0db599;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-weight: bold;
-            border: 1px solid black;
-        }
-
         .grid-box {
-            background-color: #e6e6e6;
+            background-color: #ffdb72;
             padding: 20px;
-            text-align: center;
             border: 1px solid black;
         }
-
         @media (max-width: 800px) {
-            .blog-layout {
-                grid-template-columns: 1fr;
-            }
-        }
+            .card-container {flex-wrap: wrap;}
+            .blog-layout {grid-template-columns: 1fr;}
+            .product-grid {grid-template-columns: repeat(2, 1fr);}
+}
+
     </style>
+
 </head>
 
 <body>
 
-    <a href="#end">Go to Bottom</a>
+    <a href="#bottom">Go to Bottom</a>
 
-    <h1 id="main-title">MY BLOG POST PAGE</h1>
+    <header>
 
-    <h6 style="text-align:center;">MY FAMILY BLOG POST</h6>
+        <h1 id="family-heading"><center>MY BLOG POST PAGE</center></h1>
 
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <h6><center>MY LIFE AS A MOM AND A COLLEGE STUDENT</center></h6>
+
+        <p><b>Publication Date:</b> August 3, 2026</p>
+        <p><b>Author:</b> Aira Pagal</p>
+
+    </header>
+    
+    <nav class="navigation-bar">
+        <a href="#About">Family</a>
+        <a href="#photos">Photos</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#bottom">Contact</a>
     </nav>
 
-    <div class="blog-layout">
 
-        <main class="main-content">
-
-            <p><b>Publication Date:</b> August 3, 2026</p>
-            <p><b>Author:</b> Aira Pagal</p>
-
-            <p style="background-color: rgb(137, 163, 175);">
-                My family is the most important part of my life. They give me love, support, and strength every day.
-                Even when life becomes difficult, we always help each other and stay together. Spending time with my
-                family makes me happy and reminds me that I am never alone.
-            </p>
-
-            <p style="background-color: rgb(142, 111, 161);">
-                As a college student, it is sometimes hard to balance school and family responsibilities. I need to
-                finish my assignments, study my lessons, and still find time to take care of my family. Although it
-                can be tiring, I always do my best because I know that my education will help us have a better future.
-            </p>
-
-            <p style="background-color: rgb(166, 112, 149);">
-                I believe that love, respect, and understanding make a family stronger. Every challenge teaches us
-                to become patient and responsible. I am thankful for my family because they inspire me to keep going,
-                work hard, and never give up on my dreams.
-            </p>
-
-            <h2 id="services">Family Photos</h2>
-
+    <article>
+        <section>
+            <h2>My Life</h2>
             <div class="card-container">
 
                 <div class="card">
-                    <img src="https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/768375429_2711856305896799_1815053964437333168_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1951&ctp=s2048x1951&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHeH5czGya4-ZYsOxxVx6VxF8KTVz2Ol_wXwpNXPY6X_G6JSYhYl6Uox_IZUmPa1WK0GG97_VEfcx_S2wRCr5BC&_nc_ohc=ZI_t7KpcLx8Q7kNvwGisSii&_nc_oc=AdqH-REe77L7KloRq2LjH6D5i-PKKpk9oD8_XH6ZB9HTnBzd2cj6yuRA-POp2x1uQ54&_nc_zt=23&_nc_ht=scontent.fmnl33-5.fna&_nc_gid=nywJiut1nyIZxS_iouxVJQ&_nc_ss=7b2a8&oh=00_AQG9aFRKPkXDXpQpMx0vlePRB2ZSGm0f4hI04hhrvBI1rw&oe=6A81F395"
-                        alt="My Family Picture">
-                    <h3>My Family</h3>
-                    <p>My family gives me love, support, and happiness.</p>
+                    <h3>Mom</h3>
+                    <p>Taking care of my family with love.</p>
                 </div>
-
+                
                 <div class="card">
-                    <img src="https://photos.app.goo.gl/D5RoFWXaFZt2aJSb9"
-                        alt="My Student Life">
-                    <h3>My Student Life</h3>
-                    <p>I study hard to achieve my goals and dreams.</p>
+                    <h3>Student</h3>
+                    <p>Studying hard to achieve my dreams.</p>
                 </div>
-
+                
                 <div class="card">
-                    <img src="https://scontent.fmnl12-1.fna.fbcdn.net/v/t39.30808-6/751113108_2690072331408530_9080363081469566754_n.jpg?stp=dst-jpg_tt6&cstp=mx720x960&ctp=s720x960&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFUYeB8qGOrQHZ4QqHk-aTUd2mwlv7eRAd3abCW_t5EB-Tu63tdXZwkk5Y49GnoS9DNUdjljJjOGm_0tKeEto0N&_nc_ohc=-AWavxJlmJ8Q7kNvwEbPd-C&_nc_oc=AdoPfLOCWUYlwnX-xz__wLq0o1vp6xdvRBmyA_VcT9bTNxrv6dC89kuOJTNSD-8AWRQ&_nc_zt=23&_nc_ht=scontent.fmnl12-1.fna&_nc_gid=iGM1I5Oe_jTRXhh258Rn0g&_nc_ss=7b2a8&oh=00_AQH4q5FhKktE-wE7UB0meW-IM7C6NDTmq2AvZpXZ0p88MA&oe=6A8220CC"
-                        alt="Fun under the Sun">
-                    <h3>My Hobbies</h3>
-                    <p>I enjoy going for walks, going on a trip and food trips.</p>
+                    <h3>Wife</h3>
+                    <p>Building a happy life with my family.</p>
                 </div>
+            </div>
+        </section>
 
+
+        <section class="paragraph-section">
+
+            <p class="highlight">
+                <center>
+                    My family is the most important part of my life. They give me love,
+                    support and strength every day. Even when life becomes difficult,
+                    we always help each other and stay together. Spending time with my
+                    family makes me happy and reminds me that I am never alone.
+                </center>
+            </p>
+
+            <p>
+                <center>
+                    As a college student, it is sometimes hard to balance school and
+                    family responsibilities. I need to finish my assignments, study
+                    for my lessons, and still find time for my family and also take
+                    care of my family. Although it can be tiring, I always do my best
+                    because I know that my education will help us have a better future.
+                </center>
+            </p>
+
+            <p class="highlight">
+                <center>
+                    I believe that love, respect and understanding make a family
+                    stronger. Every challenge teaches us to become patient and
+                    responsible. I am thankful for my family because they inspire me
+                    to keep going, work hard and never give up on my dreams.
+                </center>
+            </p>
+
+        </section>
+
+
+        <section class="pics">
+
+            <h2>Family Photos</h2>
+
+            <center>
+                <img src="https://scontent.fmnl12-1.fna.fbcdn.net/v/t39.30808-6/684284134_2248881559259639_4519914300092158694_n.jpg?stp=dst-jpg_tt6&cstp=mx1254x1254&ctp=s1080x2048&_nc_cat=104&ccb=1-7&_nc_sid=669761&_nc_eui2=AeFIUjgjKUIe3hE-ngezR3e1f2OGlovVRRp_Y4aWi9VFGhBG8QflH7UyL_yjTF2S8zpUn1MRmgpl5DaD3L0ic1k5&_nc_ohc=C4p585cIYuEQ7kNvwEkLCq4&_nc_oc=AdreuilYOIUNDyTSEjeRTn7gMA3O2-_jGy4c1mN7KSHIK8p92sLcM1sgRmuZ4o6yvps&_nc_zt=23&_nc_ht=scontent.fmnl12-1.fna&_nc_gid=5sudvB6A2sgZfRkvfEoD_w&_nc_ss=7b2a8&oh=00_AQEAoQBnHZrPCJ3rGWkwHppfiTUeYciGBCeZdHteBMYXgg&oe=6A905777"
+                alt="Image 1" width="400">
+            </center>
+
+            <p><center>My Family Picture</center></p>
+
+
+            <center>
+                <img src="https://scontent.fpag2-1.fna.fbcdn.net/v/t39.30808-6/486459496_2241914682890966_8649545963752839918_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s1536x2048&_nc_cat=103&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGZGM9n0Jlw9bIRB39xhRwU1wPRERAZnI7XA9EREBmcjptbjH9yVAKfpdyH-wyvpm0Wf_oQLWnN29bUV0IdPi-a&_nc_ohc=ZRfCl6OP1xwQ7kNvwGoAV9L&_nc_oc=AdrEcqQJYDhh1m6SYVTVmd1f_IkzmROrXvuk_ZObcdlnK6gA2Zn4Mnhp-tYpeikevds&_nc_zt=23&_nc_ht=scontent.fpag2-1.fna&_nc_gid=6XCsFZQTGoz_gBPVIVHfqQ&_nc_ss=7b2a8&oh=00_AQH1Ol8sYGErANJ4CqYCeWG90eRtmxz6Riw4m63YRFtr8w&oe=6A8A0015"
+                alt="Image 2" width="400">
+            </center>
+
+            <p><center>Me As A Student</center></p>
+
+
+            <center>
+                <img src="https://scontent.fpag2-1.fna.fbcdn.net/v/t39.30808-6/751113108_2690072331408530_9080363081469566754_n.jpg?stp=dst-jpg_tt6&cstp=mx720x960&ctp=s720x960&_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFUYeB8qGOrQHZ4QqHk-aTUd2mwlv7eRAd3abCW_t5EB-Tu63tdXZwkk5Y49GnoS9DNUdjljJjOGm_0tKeEto0N&_nc_ohc=ND5293k0bLoQ7kNvwGDiup8&_nc_oc=Adpk4ITz9ZyOy9Z235lkXNQK_b3zqKmk3SVBlLjUGWYTIPIxT8OG6rMOJmsVdGU_dXk&_nc_zt=23&_nc_ht=scontent.fpag2-1.fna&_nc_gid=f3W1-yjlVEGAWkQQdSqk0w&_nc_ss=7b2a8&oh=00_AQFss0AqeEGNT9ZmnrkHJwlEZPQJ1HS_hnMlJNeCKM-w-w&oe=6A8A09CC"
+                alt="Image 3" width="400">
+            </center>
+
+            <p><center>Fun under the Sun</center></p>
+
+        </section>
+        
+        <section>
+            <h2>Responsive Image Gallery</h2>
+            <div class="image-gallery">
+                <img src="https://scontent.fmnl12-1.fna.fbcdn.net/v/t39.30808-6/684284134_2248881559259639_4519914300092158694_n.jpg?stp=dst-jpg_tt6&cstp=mx1254x1254&ctp=s1080x2048&_nc_cat=104&ccb=1-7&_nc_sid=669761&_nc_eui2=AeFIUjgjKUIe3hE-ngezR3e1f2OGlovVRRp_Y4aWi9VFGhBG8QflH7UyL_yjTF2S8zpUn1MRmgpl5DaD3L0ic1k5&_nc_ohc=C4p585cIYuEQ7kNvwEkLCq4&_nc_oc=AdreuilYOIUNDyTSEjeRTn7gMA3O2-_jGy4c1mN7KSHIK8p92sLcM1sgRmuZ4o6yvps&_nc_zt=23&_nc_ht=scontent.fmnl12-1.fna&_nc_gid=5sudvB6A2sgZfRkvfEoD_w&_nc_ss=7b2a8&oh=00_AQEAoQBnHZrPCJ3rGWkwHppfiTUeYciGBCeZdHteBMYXgg&oe=6A905777" alt="Image 1">
+                <img src="https://scontent.fpag2-1.fna.fbcdn.net/v/t39.30808-6/486459496_2241914682890966_8649545963752839918_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s1536x2048&_nc_cat=103&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGZGM9n0Jlw9bIRB39xhRwU1wPRERAZnI7XA9EREBmcjptbjH9yVAKfpdyH-wyvpm0Wf_oQLWnN29bUV0IdPi-a&_nc_ohc=ZRfCl6OP1xwQ7kNvwGoAV9L&_nc_oc=AdrEcqQJYDhh1m6SYVTVmd1f_IkzmROrXvuk_ZObcdlnK6gA2Zn4Mnhp-tYpeikevds&_nc_zt=23&_nc_ht=scontent.fpag2-1.fna&_nc_gid=6XCsFZQTGoz_gBPVIVHfqQ&_nc_ss=7b2a8&oh=00_AQH1Ol8sYGErANJ4CqYCeWG90eRtmxz6Riw4m63YRFtr8w&oe=6A8A0015" alt="Image 2">
+                <img src="https://scontent.fpag2-1.fna.fbcdn.net/v/t39.30808-6/751113108_2690072331408530_9080363081469566754_n.jpg?stp=dst-jpg_tt6&cstp=mx720x960&ctp=s720x960&_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFUYeB8qGOrQHZ4QqHk-aTUd2mwlv7eRAd3abCW_t5EB-Tu63tdXZwkk5Y49GnoS9DNUdjljJjOGm_0tKeEto0N&_nc_ohc=ND5293k0bLoQ7kNvwGDiup8&_nc_oc=Adpk4ITz9ZyOy9Z235lkXNQK_b3zqKmk3SVBlLjUGWYTIPIxT8OG6rMOJmsVdGU_dXk&_nc_zt=23&_nc_ht=scontent.fpag2-1.fna&_nc_gid=f3W1-yjlVEGAWkQQdSqk0w&_nc_ss=7b2a8&oh=00_AQFss0AqeEGNT9ZmnrkHJwlEZPQJ1HS_hnMlJNeCKM-w-w&oe=6A8A09CC" alt="Image 3">
+            </div>
+        </section>
+        
+        <section>
+            <h2>Centered Element</h2>
+            <div class="center-container">
+                <div class="center-element">
+                    My Life as a Mom and College Student
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Centered Element</h2>
+            <div class="center-container">
+                <div class="center-element">
+                    My Life as a Mom and College Student
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Two-Column Blog Layout</h2>
+            <div class="blog-layout">
+                <div class="main-blog">
+                    <h3>Main Content</h3>
+                    <p>Being a mom and a college student is not easy,
+                but I continue to work hard for my family and future.</p>
+            </div>
+            
+            <div class="sidebar">
+                <h3>Sidebar</h3>
+                <p>My Family</p>
+                <p>My Hobbies</p>
+                <p>My Weekly Schedule</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Product Grid</h2>
+        <div class="product-grid">
+
+            <div class="product">
+                <h3>Product 1</h3>
+                <p>Notebook</p>
+            </div>
+            
+            <div class="product">
+                <h3>Product 2</h3>
+                <p>Pen</p>
             </div>
 
-            <h2 id="home">Our Favorite Hobbies</h2>
-
-            <div class="list-container">
-
-                <div>
-                    <b>Ordered List</b>
-                    <ol>
-                        <li>Go to Church</li>
-                        <li>Go for Walks</li>
-                        <li>Food Trips</li>
-                    </ol>
-                </div>
-
-                <div>
-                    <b>Unordered List</b>
-                    <ul>
-                        <li>Go to the Playground</li>
-                        <li>Swimming</li>
-                        <li>Watching Cartoons</li>
-                    </ul>
-                </div>
-
+            <div class="product">
+                <h3>Product 3</h3>
+                <p>School Bag</p>
             </div>
 
-            <h2 id="portfolio">Weekly Schedule</h2>
+            <div class="product">
+                <h3>Product 4</h3>
+                <p>School Shoes</p>
+            </div>
+        </div>
+    </section>
 
-            <table>
+    <section>
+        <h2>Calendar Layout</h2>
+        <div class="calendar">
+            <div class="calendar-header">Sun</div>
+            <div class="calendar-header">Mon</div>
+            <div class="calendar-header">Tue</div>
+            <div class="calendar-header">Wed</div>
+            <div class="calendar-header">Thu</div>
+            <div class="calendar-header">Fri</div>
+            <div class="calendar-header">Sat</div>
+
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Grid Row and Column Span</h2>
+        <div class="grid-span">
+            <div class="spanning-box">This box spans multiple rows and columns.</div>
+            <div class="grid-box">Box 1</div>
+            <div class="grid-box">Box 2</div>
+            <div class="grid-box">Box 3</div>
+            <div class="grid-box">Box 4</div>
+        </div>
+    </section>
+
+    <section class="gradient-background">
+        <h2>Our Favorite Hobbies</h2>
+
+    <div class="ordered-list">
+        <p>Ordered List</p>
+        <ol>
+            <li>Go to Church</li>
+            <li>Go for Rides</li>
+            <li>Food Trips</li>
+        </ol>
+    </div>
+
+    <div class="unordered-list">
+        <p>Unordered List</p>
+        <ul>
+            <li>Go to Playground</li>
+            <li>Swimming</li>
+            <li>Watching Cartoons</li>
+        </ul>
+    </div>
+</section>
+
+
+        <section class="table">
+
+            <h2>Weekly Schedule</h2>
+
+            <table border="1">
+
                 <tr>
                     <th>Day</th>
                     <th>Activity</th>
@@ -301,10 +447,10 @@
                 </tr>
 
                 <tr>
-                    <td>Monday - Friday</td>
+                    <td>Monday-Friday</td>
                     <td>School</td>
                     <td>7:30 AM</td>
-                    <td>SLSU - Lucena Campus</td>
+                    <td>SLSU-Lucena Campus</td>
                 </tr>
 
                 <tr>
@@ -320,163 +466,69 @@
                     <td>9:00 AM</td>
                     <td>St. Ferdinand Cathedral</td>
                 </tr>
+
             </table>
 
-            <h2>Calendar</h2>
+        </section>
 
-            <div class="calendar-title">August 2026</div>
+    </article>
 
-            <div class="calendar">
 
-                <div class="day-name">Sunday</div>
-                <div class="day-name">Monday</div>
-                <div class="day-name">Tuesday</div>
-                <div class="day-name">Wednesday</div>
-                <div class="day-name">Thursday</div>
-                <div class="day-name">Friday</div>
-                <div class="day-name">Saturday</div>
+    <section class="form-section">
 
-                <div class="day"></div>
-                <div class="day"></div>
-                <div class="day"></div>
-                <div class="day"></div>
-                <div class="day"></div>
-                <div class="day"></div>
-                <div class="day">1</div>
+        <h1>FAMILY INFORMATION FORM</h1>
 
-                <div class="day">2</div>
-                <div class="day">3</div>
-                <div class="day">4</div>
-                <div class="day">5</div>
-                <div class="day">6</div>
-                <div class="day">7</div>
-                <div class="day">8</div>
+        <form>
 
-                <div class="day">9</div>
-                <div class="day">10</div>
-                <div class="day">11</div>
-                <div class="day">12</div>
-                <div class="day">13</div>
-                <div class="day">14</div>
-                <div class="day">15</div>
+            Full Name:<br>
+            <input type="text" required>
+            <br><br>
 
-                <div class="day">16</div>
-                <div class="day">17</div>
-                <div class="day">18</div>
-                <div class="day">19</div>
-                <div class="day">20</div>
-                <div class="day">21</div>
-                <div class="day">22</div>
+            Email:<br>
+            <input type="email" required>
+            <br><br>
 
-                <div class="day">23</div>
-                <div class="day">24</div>
-                <div class="day">25</div>
-                <div class="day">26</div>
-                <div class="day">27</div>
-                <div class="day">28</div>
-                <div class="day">29</div>
+            Comments:<br>
+            <textarea></textarea>
+            <br><br>
 
-                <div class="day">30</div>
-                <div class="day">31</div>
+            Skills:<br>
+            <input type="checkbox"> HTML
+            <input type="checkbox"> CSS
+            <input type="checkbox"> JavaScript
+            <br><br>
 
-            </div>
+            Contact:<br>
+            <input type="radio" name="contact"> Phone
+            <input type="radio" name="contact"> Email
+            <br><br>
 
-            <h2>Family Activities</h2>
+            Country:<br>
+            <select>
+                <option>Philippines</option>
+                <option>Japan</option>
+                <option>Korea</option>
+                <option>Canada</option>
+                <option>Australia</option>
+            </select>
 
-            <div class="grid-span">
+            <br><br>
 
-                <div class="span-column">
-                    Family Bonding
-                    <br>
-                    We spend time together by eating, talking, and enjoying simple moments.
-                </div>
+            Profile Picture:<br>
+            <input type="file">
+            <br><br>
 
-                <div class="grid-box">
-                    Family Meals
-                </div>
+            <input type="submit" value="Submit">
 
-                <div class="span-row">
-                    Family Time
-                    <br>
-                    Our family enjoys spending weekends together.
-                </div>
+        </form>
 
-                <div class="grid-box">
-                    Going for Walks
-                </div>
+    </section>
 
-                <div class="grid-box">
-                    Swimming
-                </div>
 
-            </div>
+    <footer id="bottom">
 
-        </main>
+        <p><center>Thank you for visiting my Blog Post!</center></p>
 
-        <aside class="sidebar">
-
-            <h2>Family Website</h2>
-
-            <p>About My Family</p>
-
-            <h2 id="contact">FAMILY INFORMATION FORM</h2>
-
-            <form action="#">
-
-                <label>Full Name:</label><br>
-                <input type="text" name="fullname" required>
-                <br><br>
-
-                <label>Email:</label><br>
-                <input type="email" name="email" required>
-                <br><br>
-
-                <label>Comments:</label><br>
-                <textarea name="comments"></textarea>
-                <br><br>
-
-                <label>Skills:</label><br>
-                <input type="checkbox" name="skills" value="HTML"> HTML
-                <input type="checkbox" name="skills" value="CSS"> CSS
-                <input type="checkbox" name="skills" value="JavaScript"> JavaScript
-
-                <br><br>
-
-                <label>Preferred Contact:</label><br>
-                <input type="radio" name="contact" value="Phone"> Phone
-                <input type="radio" name="contact" value="Email"> Email
-
-                <br><br>
-
-                <label>Country:</label><br>
-
-                <select name="country">
-                    <option>Philippines</option>
-                    <option>Japan</option>
-                    <option>Korea</option>
-                    <option>Canada</option>
-                    <option>Australia</option>
-                </select>
-
-                <br><br>
-
-                <label>Profile Picture:</label><br>
-                <input type="file">
-
-                <br><br>
-
-                <input type="submit" value="Submit">
-
-            </form>
-
-        </aside>
-
-    </div>
-
-    <footer id="end">
-        <p style="text-align:center;">
-            Thank you for visiting my Blog Post!
-        </p>
     </footer>
 
 </body>
