@@ -62,13 +62,7 @@
             padding: 10px;
         }
 
-        .ordered-list {
-            background: #fafafa;
-            padding: 10px;
-            border: 1px solid black;
-            margin: 20px;
-        }
-
+        .ordered-list,
         .unordered-list {
             background: #fafafa;
             padding: 10px;
@@ -76,9 +70,13 @@
             margin: 20px;
         }
 
-        .table {
-            background-color: #ffdb72;
-            padding: 10px;
+        .class-schedule {
+            background-color: #885072;
+            padding: 30px;
+            border: 1px solid rgb(77, 11, 27);
+            border-radius: 20px;
+            margin: 20px;
+            text-align: center;
         }
 
         .form-section {
@@ -151,10 +149,6 @@
             border-radius: 10px;
         }
 
-        .single-element p {
-            text-align: center;
-        }
-
         .blog-layout {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -197,6 +191,14 @@
             text-align: center;
         }
 
+        .calendar-section {
+            background-color: #e9cbce;
+            padding: 15px;
+            text-align: center;
+            border: 2px solid rgb(182, 47, 103);
+            border-radius: 10px;
+        }
+
         .calendar {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -205,16 +207,18 @@
         }
 
         .calendar div {
-            border: 2px solid rgb(129, 9, 65);
+            border: 2px solid rgb(238, 10, 116);
             padding: 10px;
             text-align: center;
             border-radius: 10px;
-            color: rgb(129, 9, 65);
+            color: rgb(25, 18, 21);
         }
 
         .calendar-header {
-            background-color: #ffb2bb;
+            background-color: #db379c;
             font-weight: bold;
+            font-size: 18px;
+            color: rgb(9, 1, 5);
         }
 
         .grid-span {
@@ -234,14 +238,13 @@
         }
 
         .grid-box {
-            background-color: #ffdb72;
+            background-color: #ccdf77;
             padding: 20px;
-            border: 1px solid black;
+            border: 2px solid black;
             text-align: center;
         }
 
         @media (max-width: 800px) {
-
             .card-container {
                 flex-wrap: wrap;
             }
@@ -255,7 +258,6 @@
             }
         }
     </style>
-
 </head>
 
 <body>
@@ -281,13 +283,11 @@
     </header>
 
     <nav class="navigation-bar">
-
         <a href="#family">Family</a>
         <a href="#photos">Photos</a>
         <a href="#hobbies">Hobbies</a>
         <a href="#schedule">Schedule</a>
         <a href="#bottom">Contact</a>
-
     </nav>
 
     <article>
@@ -312,7 +312,9 @@
                     <h3>Wife</h3>
                     <p>Building a happy life with my family.</p>
                 </div>
+
             </div>
+
         </section>
 
         <section id="family" class="paragraph-section">
@@ -347,14 +349,9 @@
 
             <div class="image-gallery">
 
-                <img src="EBARLEFAM.jpg"
-                alt="Family Image">
-
-                <img src="STUDENT.jpg"
-                alt="Student Image">
-
-                <img src="FUN.jpg"
-                alt="Fun Image">
+                <img src="EBARLEFAM.jpg" alt="Family Image">
+                <img src="STUDENT.jpg" alt="Student Image">
+                <img src="FUN.jpg" alt="Fun Image">
 
             </div>
 
@@ -367,6 +364,7 @@
                 <div class="single-element">
                     <h2>My Life as a Mom and College Student</h2>
                 </div>
+
             </div>
 
         </section>
@@ -389,6 +387,7 @@
                     </p>
 
                 </div>
+
                 <div class="sidebar">
 
                     <h3>Sidebar</h3>
@@ -398,6 +397,7 @@
                     <p>My Weekly Schedule</p>
 
                 </div>
+
             </div>
 
         </section>
@@ -430,7 +430,9 @@
 
         </section>
 
-        <section>
+        <section class="calendar-section">
+
+            <h1>CALENDAR</h1>
 
             <div class="calendar">
 
@@ -516,20 +518,24 @@
             </div>
 
             <div class="unordered-list">
+
                 <p>Unordered List</p>
+
                 <ul>
                     <li>Go to Playground</li>
                     <li>Swimming</li>
                     <li>Watching Cartoons</li>
                 </ul>
+
             </div>
+
         </section>
 
-        <section id="schedule" class="table">
+        <section id="schedule" class="class-schedule">
 
-            <h2>Weekly Schedule</h2>
+            <h1>WEEKLY SCHEDULE</h1>
 
-            <table border="1">
+            <table border="5">
 
                 <tr>
                     <th>Day</th>
