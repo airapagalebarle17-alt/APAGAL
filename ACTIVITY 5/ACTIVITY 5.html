@@ -2,17 +2,33 @@
 <html>
 
 <head>
-    <title>Activity 5</title>
+    <title>Activity 4 and 5</title>
 
     <style>
         * {
             box-sizing: border-box;
         }
 
+        body {
+            background-color: #ffffff;
+        }
+
         p {
             font-size: 18px;
             line-height: 1.5;
             text-align: justify;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        h2 {
+            font-size: 26px;
+        }
+
+        h3 {
+            font-size: 22px;
         }
 
         a:link {
@@ -114,7 +130,9 @@
             border: 1px solid black;
         }
 
-        .card p {
+        .card p,
+        .sidebar p,
+        .product p {
             text-align: center;
         }
 
@@ -128,7 +146,8 @@
 
         .image-gallery img {
             width: 250px;
-            height: 200px;
+            max-width: 100%;
+            height: auto;
             object-fit: cover;
         }
 
@@ -168,10 +187,6 @@
             border: 2px solid rgb(181, 12, 223);
         }
 
-        .sidebar p {
-            text-align: center;
-        }
-
         .product-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -185,10 +200,6 @@
             text-align: center;
             border: 2px solid rgb(83, 127, 140);
             border-radius: 20px;
-        }
-
-        .product p {
-            text-align: center;
         }
 
         .calendar-section {
@@ -244,49 +255,10 @@
             text-align: center;
         }
 
-        @media (max-width: 800px) {
-
-            .card-container {
-                flex-wrap: wrap;
-            }
-
-            .blog-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .product-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* ACTIVITY 5 - RESPONSIVE DESIGN */
-
-        body {
-            background-color: #ffffff;
-        }
-
-        h1 {
-            font-size: 32px;
-        }
-
-        h2 {
-            font-size: 26px;
-        }
-
-        h3 {
-            font-size: 22px;
-        }
-
-        .image-gallery img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Mobile devices */
         @media (max-width: 600px) {
 
             body {
-                background-color: #f59dd4;
+                background-color: #e9cbce;
             }
 
             h1 {
@@ -305,20 +277,20 @@
                 font-size: 14px;
             }
 
+            .card-container {
+                flex-wrap: wrap;
+            }
+
             .sidebar {
                 display: none;
             }
 
-            .blog-layout {
-                grid-template-columns: 1fr;
-            }
-
+            .blog-layout,
             .product-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        /* Medium screens */
         @media (min-width: 601px) and (max-width: 800px) {
 
             h1 {
@@ -336,9 +308,20 @@
             p {
                 font-size: 17px;
             }
+
+            .card-container {
+                flex-wrap: wrap;
+            }
+
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        /* Large screens */
         @media (min-width: 801px) {
 
             h1 {
@@ -352,14 +335,8 @@
             h3 {
                 font-size: 25px;
             }
-
-            p {
-                font-size: 18px;
-            }
         }
-
     </style>
-
 </head>
 
 <body>
@@ -453,11 +430,11 @@
 
             <div class="image-gallery">
 
-                <img src="FAM.jpg" alt="Family Image">
+                <img src="EBARLEFAM.jpg" alt="Family Image">
 
-                <img src="STUDENTMOM.jpg" alt="Student Image">
+                <img src="STUDENT.jpg" alt="Student Image">
 
-                <img src="HAVE FUN.jpg" alt="Fun Image">
+                <img src="FUN.jpg" alt="Fun Image">
 
             </div>
 
