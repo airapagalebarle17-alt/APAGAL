@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 
 <html>
@@ -23,6 +24,22 @@
         text-align: justify;
     }
 
+    a:link {
+        color: #3d08da;
+    }
+
+    a:visited {
+        color: #ffdb72;
+    }
+
+    a:hover {
+        color: #aa0c65;
+    }
+
+    a:active {
+        color: red;
+    }
+
     h1 {
         font-size: 32px;
         color: #9f00c5;
@@ -44,18 +61,6 @@
     h4 {
         font-weight: bold;
         color: #9f00c5;
-    }
-    a:link {
-        color: #3d08da;
-    }
-    a:visited {
-        color: #ffdb72;
-    }
-    a:hover {
-        color: #aa0c65;
-    }
-    a:active {
-        color: red;
     }
 
     #family-heading {
@@ -92,6 +97,10 @@
 
     .navigation-bar a:hover {
         color: #ffffff;
+    }
+
+    .navigation-bar a:active {
+        color: #fe4eda;
     }
 
     .card-container {
@@ -362,6 +371,14 @@
         text-align: center;
     }
 
+    footer {
+        background-color: #da70d6;
+        padding: 20px;
+        margin-top: 20px;
+        border: 2px solid #9f00c5;
+        border-radius: 20px;
+    }
+
     @media (max-width: 600px) {
 
         body {
@@ -484,12 +501,13 @@
 <a href="#hobbies">HOBBIES</a>
 <a href="#schedule">SCHEDULE</a>
 <a href="#calendar">CALENDAR</a>
-<a href="#form">fORM</a>
+<a href="#form">FORM</a>
 
 </nav>
 
 <article>
-<section id="about" class="about-section"></section id>
+
+<section id="about" class="about-section">
 
     <h2>My Life</h2>
 
@@ -774,6 +792,7 @@
         </tr>
 
     </table>
+
 </section>
 
 </article>
@@ -827,11 +846,18 @@
     <input type="submit" value="Submit">
 
 </form>
+
 </section>
 
 <footer id="bottom">
-<p style="text-align: center;">Thank you for visiting my Blog Post!</p>
+
+<p style="text-align: center;">
+    Thank you for visiting my Blog Post!
+</p>
+
 </footer>
 
 </body>
+
 </html>
+```
