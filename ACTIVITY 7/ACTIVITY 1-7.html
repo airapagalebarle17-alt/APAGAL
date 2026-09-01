@@ -105,9 +105,10 @@
 
     .card-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         gap: 20px;
         min-height: 250px;
         margin: 20px 0;
@@ -118,8 +119,7 @@
     }
 
     .card {
-        width: 100%;
-        max-width: 250px;
+        width: 200px;
         padding: 20px;
         text-align: center;
         background: linear-gradient(to right, #eeacf2, #c8a5f4);
@@ -159,11 +159,11 @@
     }
 
     .image-gallery figure {
-        width: 100%;
-        max-width: 280px;
         margin: 0;
         padding: 10px;
         text-align: center;
+        width: 100%;
+        max-width: 280px;
     }
 
     .image-gallery img {
@@ -421,20 +421,25 @@
     }
 
     footer {
-        background: linear-gradient(to right, #c8a5f4, #eeacf2);
-        color: #4b3f5c;
-        padding: 20px;
-        margin: 20px 0 0;
-        border: 2px solid #b0bcf9;
-        border-radius: 15px;
+        margin-top: 20px;
+        padding-top: 20px;
     }
 
     footer > p {
-        text-align: center;
+        background: linear-gradient(to right, #c8a5f4, #eeacf2);
+        color: #4b3f5c;
+        padding: 20px;
         margin: 0;
+        border: 2px solid #b0bcf9;
+        border-radius: 15px;
+        text-align: center;
     }
 
-    @media (max-width: 800px) {
+    @media (min-width: 601px) {
+        body {
+            padding: 20px;
+        }
+
         #family-heading {
             font-size: 42px;
         }
@@ -451,24 +456,6 @@
             font-size: 22px;
         }
 
-        .blog-layout {
-            grid-template-columns: 1fr;
-        }
-
-        .product-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .grid-span {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, 100px);
-        }
-
-        .spanning-box {
-            grid-column: 1 / 2;
-            grid-row: 1 / 3;
-        }
-
         .card-container {
             flex-direction: row;
             flex-wrap: wrap;
@@ -477,13 +464,53 @@
         .card {
             width: 200px;
         }
+
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 801px) {
+        #family-heading {
+            font-size: 50px;
+        }
+
+        h1 {
+            font-size: 45px;
+        }
+
+        h2 {
+            font-size: 32px;
+        }
+
+        h3 {
+            font-size: 25px;
+        }
+
+        .blog-layout {
+            grid-template-columns: 2fr 1fr;
+        }
+
+        .product-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .image-gallery {
+            gap: 40px;
+        }
+
+        .class-schedule {
+            padding: 30px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .blog-layout {
+            grid-template-columns: 1fr;
+        }
     }
 
     @media (max-width: 600px) {
-        body {
-            padding: 10px;
-        }
-
         #family-heading {
             font-size: 28px;
         }
@@ -494,6 +521,15 @@
 
         .navigation-bar a {
             width: 100%;
+        }
+
+        .card-container {
+            flex-direction: column;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 250px;
         }
 
         .sidebar {
@@ -514,13 +550,8 @@
             grid-row: auto;
         }
 
-        .card-container {
-            flex-direction: column;
-        }
-
-        .card {
-            width: 100%;
-            max-width: 250px;
+        .form-section {
+            padding: 20px;
         }
     }
 </style>
@@ -532,6 +563,7 @@
 <a href="#bottom">Go to Bottom</a>
 
 <header>
+
     <h1 id="family-heading">MY BLOG POST PAGE</h1>
 
     <h4 style="text-align:center;">
@@ -545,20 +577,24 @@
     <p>
         <b>Author:</b> Aira Pagal
     </p>
+
 </header>
 
 <nav class="navigation-bar">
+
     <a href="#about">ABOUT</a>
     <a href="#photos">PHOTOS</a>
     <a href="#hobbies">HOBBIES</a>
     <a href="#schedule">SCHEDULE</a>
     <a href="#calendar">CALENDAR</a>
     <a href="#form">FORM</a>
+
 </nav>
 
 <main>
 
     <section id="about">
+
         <h2>My Life</h2>
 
         <div class="card-container">
@@ -579,6 +615,7 @@
             </div>
 
         </div>
+
     </section>
 
     <section id="family" class="paragraph-section">
@@ -845,71 +882,66 @@
 
 </main>
 
-<footer id="bottom">
+<section id="form" class="form-section">
 
-    <p>Thank you for visiting my Blog Post!</p>
+    <h1>FAMILY INFORMATION FORM</h1>
 
-    <section id="form" class="form-section">
+    <form>
 
-        <h1>FAMILY INFORMATION FORM</h1>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
 
-        <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-            <label for="fullname">Full Name:</label>
-            <input type="text" id="fullname" name="fullname" required>
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" required></textarea>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <label>Skills:</label>
 
-            <label for="comments">Comments:</label>
-            <textarea id="comments" name="comments" required></textarea>
+        <input type="checkbox" id="html" name="skills" value="HTML">
+        <label for="html" style="display:inline;">HTML</label>
 
-            <label>Skills:</label>
+        <input type="checkbox" id="css" name="skills" value="CSS">
+        <label for="css" style="display:inline;">CSS</label>
 
-            <input type="checkbox" id="html" name="skills" value="HTML">
-            <label for="html" style="display:inline;">HTML</label>
+        <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+        <label for="javascript" style="display:inline;">JavaScript</label>
 
-            <input type="checkbox" id="css" name="skills" value="CSS">
-            <label for="css" style="display:inline;">CSS</label>
+        <br><br>
 
-            <input type="checkbox" id="javascript" name="skills" value="JavaScript">
-            <label for="javascript" style="display:inline;">JavaScript</label>
+        <label>Contact:</label>
 
-            <br><br>
+        <input type="radio" id="phone" name="contact" value="Phone">
+        <label for="phone" style="display:inline;">Phone</label>
 
-            <label>Contact:</label>
+        <input type="radio" id="contact-email" name="contact" value="Email">
+        <label for="contact-email" style="display:inline;">Email</label>
 
-            <input type="radio" id="phone" name="contact" value="Phone">
-            <label for="phone" style="display:inline;">Phone</label>
+        <br><br>
 
-            <input type="radio" id="contact-email" name="contact" value="Email">
-            <label for="contact-email" style="display:inline;">Email</label>
+        <label for="country">Country:</label>
 
-            <br><br>
+        <select id="country" name="country">
+            <option>Philippines</option>
+            <option>Japan</option>
+            <option>Korea</option>
+            <option>Canada</option>
+            <option>Australia</option>
+        </select>
 
-            <label for="country">Country:</label>
+        <label for="profile">Profile Picture:</label>
+        <input type="file" id="profile" name="profile">
 
-            <select id="country" name="country">
-                <option>Philippines</option>
-                <option>Japan</option>
-                <option>Korea</option>
-                <option>Canada</option>
-                <option>Australia</option>
-            </select>
+        <br><br>
 
-            <label for="profile">Profile Picture:</label>
-            <input type="file" id="profile" name="profile">
+        <input type="submit" value="Submit">
 
-            <br><br>
+    </form>
 
-            <input type="submit" value="Submit">
+</section>
 
-        </form>
-
-    </section>
-
-</footer>
+<footer id="bottom"><p>Thank you for visiting my Blog Post!</p></footer>
 
 </body>
-
 </html>
