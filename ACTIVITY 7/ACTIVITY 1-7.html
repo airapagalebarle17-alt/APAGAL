@@ -74,7 +74,10 @@
 
     .navigation-bar {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
         gap: 5px;
         background: linear-gradient(to right, #c8a5f4, #b0bcf9);
         padding: 15px;
@@ -84,6 +87,8 @@
     }
 
     .navigation-bar a {
+        flex: 1;
+        min-width: 100px;
         color: #4b3f5c;
         text-transform: uppercase;
         font-weight: bold;
@@ -154,11 +159,11 @@
     }
 
     .image-gallery figure {
+        width: 100%;
+        max-width: 280px;
         margin: 0;
         padding: 10px;
         text-align: center;
-        width: 100%;
-        max-width: 280px;
     }
 
     .image-gallery img {
@@ -199,7 +204,7 @@
 
     .blog-layout {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr 1fr;
         gap: 20px;
         margin: 20px 0;
     }
@@ -227,7 +232,7 @@
 
     .product-grid {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(4, 1fr);
         gap: 15px;
         margin: 20px 0;
     }
@@ -320,12 +325,15 @@
 
     .grid-span {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 100px);
         gap: 10px;
         margin: 20px 0;
     }
 
     .spanning-box {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
         background: #c8a5f4;
         padding: 20px;
         border: 2px solid #eeacf2;
@@ -426,11 +434,7 @@
         margin: 0;
     }
 
-    @media (min-width: 601px) {
-        body {
-            padding: 20px;
-        }
-
+    @media (max-width: 800px) {
         #family-heading {
             font-size: 42px;
         }
@@ -447,16 +451,22 @@
             font-size: 22px;
         }
 
-        .navigation-bar {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
+        .blog-layout {
+            grid-template-columns: 1fr;
         }
 
-        .navigation-bar a {
-            flex: 1;
-            min-width: 100px;
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-span {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 100px);
+        }
+
+        .spanning-box {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
         }
 
         .card-container {
@@ -467,77 +477,50 @@
         .card {
             width: 200px;
         }
-
-        .product-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .grid-span {
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 100px);
-        }
-
-        .spanning-box {
-            grid-column: 1 / 3;
-            grid-row: 1 / 3;
-        }
-    }
-
-    @media (min-width: 801px) {
-        #family-heading {
-            font-size: 50px;
-        }
-
-        h1 {
-            font-size: 45px;
-        }
-
-        h2 {
-            font-size: 32px;
-        }
-
-        h3 {
-            font-size: 25px;
-        }
-
-        .blog-layout {
-            grid-template-columns: 2fr 1fr;
-        }
-
-        .product-grid {
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        .image-gallery {
-            gap: 40px;
-        }
-
-        .class-schedule {
-            padding: 30px;
-        }
-    }
-
-    @media (max-width: 800px) {
-        .blog-layout {
-            grid-template-columns: 1fr;
-        }
     }
 
     @media (max-width: 600px) {
-        .sidebar {
-            display: none;
+        body {
+            padding: 10px;
         }
 
         #family-heading {
             font-size: 28px;
         }
 
+        .navigation-bar {
+            flex-direction: column;
+        }
+
         .navigation-bar a {
             width: 100%;
         }
 
-        .form-section {
-            padding: 20px;
+        .sidebar {
+            display: none;
+        }
+
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-span {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
+
+        .spanning-box {
+            grid-column: auto;
+            grid-row: auto;
+        }
+
+        .card-container {
+            flex-direction: column;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 250px;
         }
     }
 </style>
@@ -555,8 +538,13 @@
         MY LIFE AS A MOM AND A COLLEGE STUDENT
     </h4>
 
-    <p><b>Publication Date:</b> August 3, 2026</p>
-    <p><b>Author:</b> Aira Pagal</p>
+    <p>
+        <b>Publication Date:</b> August 3, 2026
+    </p>
+
+    <p>
+        <b>Author:</b> Aira Pagal
+    </p>
 </header>
 
 <nav class="navigation-bar">
@@ -598,25 +586,26 @@
         <p class="highlight">
             My family is the most important part of my life.
             They give me love, support and strength every day.
-            Even when life becomes difficult, we always help each other
-            and stay together. Spending time with my family makes me happy
-            and reminds me that I am never alone.
+            Even when life becomes difficult, we always help each
+            other and stay together. Spending time with my family
+            makes me happy and reminds me that I am never alone.
         </p>
 
         <p>
-            As a college student, it is sometimes hard to balance school
-            and family responsibilities. I need to finish my assignments,
-            study for my lessons, and still find time for my family and
-            also take care of my family. Although it can be tiring,
-            I always do my best because I know that my education will help
-            us have a better future.
+            As a college student, it is sometimes hard to balance
+            school and family responsibilities. I need to finish
+            my assignments, study for my lessons, and still find
+            time to take care of my family. Although it can be
+            tiring, I always do my best because I know that my
+            education will help us have a better future.
         </p>
 
         <p class="highlight">
-            I believe that love, respect and understanding make a family
-            stronger. Every challenge teaches us to become patient and
-            responsible. I am thankful for my family because they inspire
-            me to keep going, work hard and never give up on my dreams.
+            I believe that love, respect and understanding make
+            a family stronger. Every challenge teaches us to become
+            patient and responsible. I am thankful for my family
+            because they inspire me to keep going, work hard and
+            never give up on my dreams.
         </p>
 
     </section>
@@ -668,10 +657,11 @@
 
                 <p>
                     Being a mom and a college student is not easy.
-                    I need to manage my time between my family, studies,
-                    assignments, and responsibilities. Even though it can
-                    be tiring, I continue to work hard because I want to
-                    achieve my dreams and have a better future for my family.
+                    I need to manage my time between my family,
+                    studies, assignments, and responsibilities.
+                    Even though it can be tiring, I continue to
+                    work hard because I want to achieve my dreams
+                    and have a better future for my family.
                 </p>
 
             </div>
@@ -921,4 +911,5 @@
 </footer>
 
 </body>
+
 </html>
