@@ -1,177 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Solar-Powered Water System</title>
+    <title>JavaScript Fundamentals Challenge</title>
 
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="ACTIVITY 1.css">
 </head>
 
 <body>
 
-<div class="overlay">
-
     <div class="container">
 
-        <section class="card">
+        <h1>JavaScript Fundamentals Challenge</h1>
 
-            <header>
-                <h1>☀️ SOLAR-POWERED WATER SYSTEM 💧</h1>
-                <p>Clean and Sustainable Water for the Community</p>
-            </header>
+        <label>Enter your name:</label>
+        <input type="text" id="name" placeholder="Your name">
 
-        </section>
+        <label>Enter your age:</label>
+        <input type="number" id="age" placeholder="Your age">
 
-        <section class="card">
+        <button onclick="showInfo()">Submit</button>
 
-            <h2>Project Highlights</h2>
+        <p id="result"></p>
 
-            <div class="highlight-grid">
+    </div>
 
-                <div class="image-card">
+    <script src="ACTIVITY 1.js"></script>
 
-                    <img
-                        src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80"
-                        alt="Solar panels">
-
-                    <div class="image-content">
-
-                        <h3>Solar Energy</h3>
-
-                        <p>
-                            Solar panels collect sunlight and provide
-                            energy for the water system.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="image-card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=600&q=80"
-                        alt="Clean water">
-
-                    <div class="image-content">
-
-                        <h3>Clean Water</h3>
-
-                        <p>
-                            The system helps provide a steady supply
-                            of clean water for the community.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="image-card">
-
-                    <img
-                        src="https://ganar-ganar.mx/wp-content/uploads/2024/08/Planet-Water-Foundation-y-MetLife-Foundation-completan-programa-para-brindar-agua-segura-a-comunidades-rurales-en-Mexico-1024x576.jpeg"
-                        alt="Community water project">
-
-                    <div class="image-content">
-
-                        <h3>Community</h3>
-
-                        <p>
-                            Solar-powered water systems can help improve
-                            water access in local communities.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="card">
-
-            <h2>Community Feedback</h2>
-
-            <form>
-
-                <div>
-                    <label for="name">1. Full Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Enter your full name"
-                        required>
-                </div>
-
-                <div>
-                    <label for="phone">2. Phone Number</label>
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="Enter your phone number"
-                        required>
-                </div>
-
-                <div>
-                    <label for="location">3. Location</label>
-                    <select id="location" name="location" required>
-                        <option value="">Please select your location</option>
-                        <option>Barangay Ibabang Talim</option>
-                        <option>Barangay Domoit</option>
-                        <option>Barangay Ibabang Iyam</option>
-                        <option>Barangay Cotta</option>
-                        <option>Barangay Dalahican</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="feedback">4. Feedback Type</label>
-                    <select id="feedback" name="feedback" required>
-                        <option value="">Please select</option>
-                        <option>Help Request</option>
-                        <option>Report Issue</option>
-                        <option>Water Quality</option>
-                        <option>Question</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="message">5. Feedback Message</label>
-                    <textarea id="message" name="message"
-                        placeholder="Write your feedback here..." required>
-                    </textarea>
-                    <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Write your feedback here..."
-                        required>
-                    </textarea>
-                </div>
-
-                <button type="submit">
-                    Submit Feedback
-                </button>
-                    
-                    <div id="outputContainer" class="hidden">
-                    <h3>Submission Summary</h3>
-                    <p><strong>Full Name:</strong> <span id="name"></span></p>
-                    <p><strong>Phone Number:</strong> <span id="phone"></span></p>
-                    <p><strong>Location:</strong> <span id="location"></span></p>
-                    <p><strong>Feedback Type:</strong> <span id="feedback"></span></p>
-                    <p><strong>Feedback Message:</strong> <span id="message"></span></p>
-                </div>
-                <div id="errorMsg"></div>
-                </form>
-
-        </section>
-
-        <footer>
-            Solar-Powered Water System • Clean Water • Better Community
-        </footer>
-        
-<script src="script.js"></script>
 </body>
 </html>
