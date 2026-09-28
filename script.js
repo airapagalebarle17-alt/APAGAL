@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const nameInput = document.getElementById('name');
 const phoneInput = document.getElementById('phone');
 const locationInput = document.getElementById('location');
@@ -31,7 +30,6 @@ if(rating <1 || rating >5){
     return;
 }
 errorMessage.textContent = "";
-=======
 document.addEventListener('DOMContentLoaded', () => {
   const button = document.querySelector('#myButton');
   const message = document.querySelector('#myMessage');
@@ -42,4 +40,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
->>>>>>> 1509865fdca25dfb226dc3ecfc17d8b0d257e7af
