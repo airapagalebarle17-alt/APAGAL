@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar-Powered Water System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <div class="container">
+
+        <section class="card">
+
+            <header>
+                <h1>☀️ SOLAR-POWERED WATER SYSTEM 💧</h1>
+                <p>Clean and Sustainable Water for the Community</p>
+            </header>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>Project Highlights</h2>
+
+            <div class="highlight-grid">
+
+                <div class="image-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80"
+                        alt="Solar panels">
+
+                    <div class="image-content">
+
+                        <h3>Solar Energy</h3>
+
+                        <p>
+                            Solar panels collect sunlight and provide
+                            energy for the water system.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="image-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=600&q=80"
+                        alt="Clean water">
+
+                    <div class="image-content">
+
+                        <h3>Clean Water</h3>
+
+                        <p>
+                            The system helps provide a steady supply
+                            of clean water for the community.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="image-card">
+
+                    <img
+                        src="https://ganar-ganar.mx/wp-content/uploads/2024/08/Planet-Water-Foundation-y-MetLife-Foundation-completan-programa-para-brindar-agua-segura-a-comunidades-rurales-en-Mexico-1024x576.jpeg"
+                        alt="Community water project">
+
+                    <div class="image-content">
+
+                        <h3>Community</h3>
+
+                        <p>
+                            Solar-powered water systems can help improve
+                            water access in local communities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>Registration Form</h2>
+
+            <form id="registrationForm">
+
+                <div>
+                    <label for="fullName">Full Name</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name">
+                </div>
+
+                <div>
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email address">
+                </div>
+
+                <div>
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password">
+                </div>
+
+                <button type="submit">
+                    Register
+                </button>
+
+            </form>
+
+            <p id="registrationMessage"></p>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>Community Feedback</h2>
+
+            <form id="feedbackForm">
+
+                <div>
+                    <label for="name">1. Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name">
+                </div>
+
+                <div>
+                    <label for="phone">2. Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number">
+                </div>
+
+                <div>
+                    <label for="location">3. Location</label>
+                    <select id="location" name="location">
+                        <option value="">Please select your location</option>
+                        <option>Barangay Ibabang Talim</option>
+                        <option>Barangay Domoit</option>
+                        <option>Barangay Ibabang Iyam</option>
+                        <option>Barangay Cotta</option>
+                        <option>Barangay Dalahican</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="feedback">4. Feedback Type</label>
+                    <select id="feedback" name="feedback">
+                        <option value="">Please select</option>
+                        <option>Help Request</option>
+                        <option>Report Issue</option>
+                        <option>Water Quality</option>
+                        <option>Question</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="message">5. Feedback Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your feedback here..."></textarea>
+                </div>
+
+                <button type="submit">
+                    Submit Feedback
+                </button>
+
+            </form>
+
+            <p id="errorMsg"></p>
+
+            <div id="outputContainer" class="hidden">
+
+                <h2>Submitted Feedback</h2>
+
+                <p>
+                    <strong>Full Name:</strong>
+                    <span id="outputName"></span>
+                </p>
+
+                <p>
+                    <strong>Phone Number:</strong>
+                    <span id="outputPhone"></span>
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    <span id="outputLocation"></span>
+                </p>
+
+                <p>
+                    <strong>Feedback Type:</strong>
+                    <span id="outputFeedbackType"></span>
+                </p>
+
+                <p>
+                    <strong>Feedback Message:</strong>
+                    <span id="outputFeedbackMessage"></span>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            Solar-Powered Water System • Clean Water • Better Community
+        </footer>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
